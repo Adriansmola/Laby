@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NotePocket</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="noteForm">
+      <h2>Dodaj nową notatkę</h2>
+      <form id="addNoteForm">
+        <div class="noteProperty">
+          <input
+            class="noteTitle input"
+            placeholder="Tytuł notatki"
+            required
+            type="text"
+          />
+        </div>
+
+        <div class="noteProperty">
+          <textarea
+            class="noteContent"
+            placeholder="Treść notatki"
+            required
+          ></textarea>
+        </div>
+
+        <div class="noteProperty">
+          <label for="noteTags">Tagi (oddzielone przecinkami):</label>
+          <input class="noteTags input" id="noteTags" type="text" />
+        </div>
+
+        <div class="noteProperty groupProperty">
+          <div>
+            <label for="noteColor">Kolor:</label>
+            <input
+              class="noteColor"
+              id="noteColor"
+              type="color"
+              value="#ffffff"
+            />
+          </div>
+
+          <button class="btn" type="submit">Dodaj notatkę</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="searchBar">
+      <label for="search">Wyszukaj:</label>
+      <input class="input" id="search" type="text" />
+    </div>
+
+    <div class="notesContainer" id="notesContainer"></div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
